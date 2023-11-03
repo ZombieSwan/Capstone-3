@@ -1,0 +1,44 @@
+Features
+Class
+GC=F
+^DJT
+^FVX
+^IRX
+^NDX
+^RUT
+^TNX
+^VIX
+^W5000
+Volume_^DJT
+Volume_^NDX
+Volume_^RUT
+PE_Ratio
+US GDP
+CPI
+Core Inflation
+Federal Funds Rate
+Consumer Sentiment
+Crude Oil Prices
+Unemployment Rate
+Housing Starts
+Personal Saving Rate
+Buffet_ind
+10Y-2Y Slope
+10Y-3M Slope
+
+smote_params = {'sampling_strategy': 'auto', 'random_state': 42}
+lstm_architecture = [
+    ('LSTM', 50, 'return_sequences=True'),
+    ('LSTM', 50, 'return_sequences=True'),
+    ('LSTM', 50),
+    ('Dense', 3, 'activation=softmax')
+]
+
+Hyperparameters,Value
+learning_rate,0.001
+epochs, 50
+batch_size, 32
+time_steps, 63
+Performance Metrics,Value
+loss,0.2173134833574295
+accuracy,0.920881986618042
